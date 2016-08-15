@@ -9,20 +9,19 @@
 
 div.scroll_2 {
     background-color: none;
-    width: 10cm;
+        width: 10cm;
     height: 10cm;
-    position: relative;
+    position: absolute;
+    z-index: 1;
     font-family: sans-serif;
     font-weight: bold;
-    font-size: 60pt;
-    line-height: 72pt;
+    font-size: 120pt;
+    line-height: 126pt;
+    margin-left: -30cm;
+    margin-top:-6.8cm;
 }
 
 .scrollable-content2 {
-width:15cm; 
-height:3.2cm; 
-    margin-top:2.8cm;
-    margin-left: 8cm;
 overflow:auto;
 }
 
@@ -60,7 +59,7 @@ font-style: italic;
 line-height: 16pt;
 font-size: 10pt; }
 
-video { 
+iframe { 
     position: fixed;
     top: 50%;
     left: 50%;
@@ -68,7 +67,7 @@ video {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -100;
+    z-index: 0;
     transform: translateX(-50%) translateY(-50%);
    background: url('background.jpg') no-repeat;
   background-size: cover;
@@ -95,10 +94,11 @@ rgba(255,255,255,0.23)
    background: rgba(0,0,0,0.5);
 }*/
 #nav a:link{
+  position: fixed;
     font-family: sans-serif;
     text-decoration: none;
     font-color:blue;
-    font-size: 8pt;
+    font-size: 10pt;
 }    
 
 #nav a:visited {
@@ -109,15 +109,23 @@ rgba(255,255,255,0.23)
 </head>
 <body>
 
-  <video autoplay muted poster="background.jpg" id="bgvid">
+<!--     <div id="ytplayer"></div> -->
+<!--   <video autoplay muted poster="background.jpg" id="bgvid" loop> -->
+    <div id="player">
+<iframe autoplay muted id="bgvid" loop class="active" src="https://www.youtube.com/embed/ctzEPILOt80" frameborder="0"></iframe>
+</div>
+
   <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-<source class="active" src="sample-videos/background_1.MOV" type="video/mp4">
-<source  src="sample-videos/background_2.MOV" type="video/mp4">
+<!-- <source class="active" src="https://www.youtube.com/embed/ctzEPILOt80" type="video/mp4">
+<source class="active" src="sample-videos/all_background.mp4" type="video/mp4"> -->
+
+
+<!-- <source  src="sample-videos/background_2.MOV" type="video/mp4">
 <source  src="sample-videos/background_3.MOV" type="video/mp4">
 <source  src="sample-videos/background_4.MOV" type="video/mp4">
 <source  src="sample-videos/background_5.MOV" type="video/mp4">
-<source  src="sample-videos/background_6.MOV" type="video/mp4">
-</video>
+<source  src="sample-videos/background_6.MOV" type="video/mp4"> -->
+
 
 <div  style="margin-left:90%;">
 <div id="nav">
@@ -125,9 +133,10 @@ rgba(255,255,255,0.23)
            <a href="https://github.com/JoBCB/Choreo-Graphic-Coding_MediaLab" target="_blank">[ Download Files ]</a>
 </div>
 
-<div id="button">
+<!-- <div id="button">
 <button>— Pause.</button></div>
-</div>
+</div> -->
+
 <!--          <p class="task">Please scroll inside this webpage! </p> 
  -->
 
@@ -138,7 +147,7 @@ rgba(255,255,255,0.23)
 
 <script type="text/javascript">
 
-var vid = document.getElementById("bgvid");
+/*var vid = document.getElementById("bgvid");
 var pauseButton = document.querySelector("#button button");
 
 pauseButton.addEventListener("click", function() {
@@ -150,9 +159,113 @@ pauseButton.addEventListener("click", function() {
     vid.pause();
     pauseButton.innerHTML = "— Move.";
   }
-})
+}) */
+
+/*var x = document.getElementById("bgvid");
+
+function enableMute() { 
+    x.muted = true;
+}
+ 
+function disableMute()  
+    muted = false;
+}
+ 
+function checkMute() { 
+    alert(x.muted);
+} 
+
+var player =  iframe.getElementById('bgvid');
+player.mute();*/
 
 
+         //reference: http://stackoverflow.com/questions/8869372/how-do-i-automatically-play-a-youtube-video-iframe-api-muted
+         //1. The <div> tag will contain the <iframe> (and video player)
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '100%',
+          width: '100%',
+          playerVars: {
+                    autoplay: 1,
+                    loop: 1,
+                    controls: 0,
+                    showinfo: 0,
+                    autohide: 1,
+                    modestbranding: 1,
+                    vq: 'hd1080'},
+          videoId: 'ctzEPILOt80',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+        player.mute();
+      }
+
+      var done = false;
+      function onPlayerStateChange(event) {
+        
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+
+/*http://stackoverflow.com/questions/24868226/how-do-you-mute-an-embedded-youtube-player
+
+// Loads the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // Replaces the 'ytplayer' element with an <iframe> and
+  // YouTube player after the API code downloads.
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+        height: '390',
+        width: '640',
+        videoId: 'https://www.youtube.com/watch?v=ctzEPILOt80',
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          disablekb: 1,
+          hl: 'ru-ru',
+          loop: 1,
+          modestbranding: 1,
+          showinfo: 0,
+          autohide: 1,
+          color: 'white',
+          iv_load_policy: 3,
+          theme: 'light',
+          rel: 0
+        },
+        events: {
+            'onReady': onPlayerReady,
+        }
+    });
+  }
+
+function onPlayerReady(event){
+    player.mute();
+}*/
+
+/*
 var myvid = document.getElementById('bgvid');
 
 myvid.addEventListener('ended', function(e) {
@@ -169,26 +282,9 @@ myvid.addEventListener('ended', function(e) {
   myvid.src = nextsource.src;
   myvid.play();
 });
+*/
 
-/*var myvid = document.getElementById('bgvid');
-var myvids = [
-  "background_1.MOV", 
-  "background_2.MOV"
-  "background_3.MOV"
-  "background_4.MOV"
-  "background_5.MOV"
-  "background_6.MOV"
-  ];
-var activeVideo = 0;
 
-myvid.addEventListener('ended', function(e) {
-  // update the active video index
-  activeVideo = (++activeVideo) % myvids.length;
-
-  // update the video source and play
-  myvid.src = myvid[activeVideo];
-  myvid.play();
-});*/
 </script>
 </body>
 </html>
