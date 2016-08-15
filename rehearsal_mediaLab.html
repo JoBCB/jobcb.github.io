@@ -1,0 +1,194 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+    
+@import url(reset_meyer.css);
+
+
+
+div.scroll_2 {
+    background-color: none;
+    width: 10cm;
+    height: 10cm;
+    position: relative;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 60pt;
+    line-height: 72pt;
+}
+
+.scrollable-content2 {
+width:15cm; 
+height:3.2cm; 
+    margin-top:2.8cm;
+    margin-left: 8cm;
+overflow:auto;
+}
+
+    .scrollable-content2 {
+      overflow-x:scroll;
+      overflow-y:scroll;
+    }
+    .scrollable-content2::-webkit-scrollbar {
+      width:0px;
+    }
+
+    .scrollable-content2::-webkit-scrollbar-thumb {
+      background:none !important;
+    } 
+
+
+.middle{ padding-left: 10cm;
+
+}
+
+#middle{ padding-left: 10cm;
+
+}
+
+#info {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 10pt;
+    line-height: 16pt;
+}
+
+.task{margin-left: 55%;
+font-family: sans-serif;
+font-style: italic;
+line-height: 16pt;
+font-size: 10pt; }
+
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+   background: url('background.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+#button button { 
+  display: block;
+  font-weight: bold;
+  width: 20%;
+  height: 5%;
+  padding: .2rem;
+  border: none; 
+  font-size: 1rem;
+  background: none;
+  color: blue;
+  border-radius: 0.1px; 
+  cursor: pointer;}
+
+/*  transition: .3s background;
+rgba(255,255,255,0.23)
+
+#button button:hover { 
+   background: rgba(0,0,0,0.5);
+}*/
+#nav a:link{
+    font-family: sans-serif;
+    text-decoration: none;
+    font-color:blue;
+    font-size: 8pt;
+}    
+
+#nav a:visited {
+    color: blue;
+}
+
+</style>    
+</head>
+<body>
+
+  <video autoplay muted poster="background.jpg" id="bgvid">
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source class="active" src="sample-videos/background_1.MOV" type="video/mp4">
+<source  src="sample-videos/background_2.MOV" type="video/mp4">
+<source  src="sample-videos/background_3.MOV" type="video/mp4">
+<source  src="sample-videos/background_4.MOV" type="video/mp4">
+<source  src="sample-videos/background_5.MOV" type="video/mp4">
+<source  src="sample-videos/background_6.MOV" type="video/mp4">
+</video>
+
+<div  style="margin-left:90%;">
+<div id="nav">
+          <a style="margin-bottom:0.6rem;" href="rehearsal_series.html">[ Backwards ]</a><br>
+           <a href="https://github.com/JoBCB/Choreo-Graphic-Coding_MediaLab" target="_blank">[ Download Files ]</a>
+</div>
+
+<div id="button">
+<button>— Pause.</button></div>
+</div>
+<!--          <p class="task">Please scroll inside this webpage! </p> 
+ -->
+
+<div class= "scrollable-content2">    
+<div class="scroll_2">
+<p> Choreography as <span="small" style="font-size:10pt; line-height:25pt;"> “writing movement”. </span> </p> <p>Meta-linguistic platform for the construction of shared vocabularies. Continuous loop between writing and re-writing, maybe un-writing, co-writing, or even over-writing existing vocabularies/ narratives. Or the creation of yet non-existing aesthetic vocabularies. Writing here means a constantly redefined experimental zone, which embraces an assemblage of bodies, acts, propositions, and statements.</p> <p><span="small" style="font-size:10pt; line-height:25pt;" id="middle">Creating... </span></p><p>subspaces of different degrees of temporality, resistant, neutral, micro and macro scales, ambiguous measurements for kinesthetic encounters. Never recognizable geometries, spiraling, amorphous, relational, contagious. Obsessive repetitiveness or prolonged duration or rhythmic predictability or even stillness. All becomes disengaged from its origin and enters this other realm. Call it a rehearsal, a dialogue, lyricism or pure research.<br><br> Movement forms a temporal and spatial becoming. Giving rise to new incorporeal objects, abstract machines, universes of value and to the movement to come.</p> <p>We are writing movement. </p>
+</div></div>
+
+<script type="text/javascript">
+
+var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#button button");
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "— Pause.";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "— Move.";
+  }
+})
+
+
+var myvid = document.getElementById('bgvid');
+
+myvid.addEventListener('ended', function(e) {
+  // get the active source and the next video source.
+  // I set it so if there's no next, it loops to the first one
+  var activesource = document.querySelector("#bgvid source.active");
+  var nextsource = document.querySelector("#bgvid source.active + source") || document.querySelector("#bgvid source:first-child");
+  
+  // deactivate current source, and activate next one
+  activesource.className = "";
+  nextsource.className = "active";
+  
+  // update the video source and play
+  myvid.src = nextsource.src;
+  myvid.play();
+});
+
+/*var myvid = document.getElementById('bgvid');
+var myvids = [
+  "background_1.MOV", 
+  "background_2.MOV"
+  "background_3.MOV"
+  "background_4.MOV"
+  "background_5.MOV"
+  "background_6.MOV"
+  ];
+var activeVideo = 0;
+
+myvid.addEventListener('ended', function(e) {
+  // update the active video index
+  activeVideo = (++activeVideo) % myvids.length;
+
+  // update the video source and play
+  myvid.src = myvid[activeVideo];
+  myvid.play();
+});*/
+</script>
+</body>
+</html>

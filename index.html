@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Choreo-Graphic-Thinking</title>
+
+<style>
+
+body {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 6rem;
+    background-color:  #f0f0f5;
+
+}
+
+#textRange { font-size: 1rem;    
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-right: 0.6rem;
+    margin-top: 2.6rem;
+    max-width: 52rem;
+}
+
+p { font-size: 2rem;  
+margin-top: 3rem;  
+    font-family: sans-serif;
+    font-weight: bold;
+    line-height: 2.8rem;
+    padding-right: 0.6rem;
+    max-width: 88%;
+
+}
+
+#nav a:link{
+    font-family: sans-serif;
+    text-decoration: none;
+    font-color:blue;
+    font-size: 8pt;
+}    
+
+#first{    
+    margin-top: 0.4rem ;
+}
+
+#nav a:visited {
+    color: blue;
+}
+
+
+#fim a:link {
+    color: white;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem; 
+    border: 0.18rem solid blue;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.65rem;
+    margin-top: 2rem;
+    box-shadow: 1rem 1rem 1.3rem blue;
+        opacity: 1;
+}
+
+#fim a:hover {
+    color:  #f0f0f5 !important;
+    opacity: 0.2;
+   border: 0rem solid  #f0f0f5;
+   text-shadow: -8rem -16rem blue;
+   text-decoration: none;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem; 
+    font-size: 16rem; 
+    box-shadow: none !important;
+}
+
+#fim a:visited {
+    color: white;
+}
+
+</style>
+</head>
+<body>
+
+<div id="nav">
+        <a href="https://github.com/JoBCB" target="_blank">[ Download Files +</a>
+        <a href="https://vimeo.com/user16079418" target="_blank"> Videos here</a>
+        <a href="https://www.youtube.com/channel/UC-2bdyW86OEeJ4Ah7GN4NnA/videos?view=0&shelf_id=0&sort=dd" target="_blank"> + and videos here too</a>
+        <a href="http://lurk.org/groups/livecode/messages/topic/5coD59tlgzYtKu3DuWA3Nw/" target="_blank">+ Join Discussion </a>
+        <a href="http://cargocollective.com/joanachicau" target="_blank">+ other Work </a>
+        <a href="https://twitter.com/JoanaBQuelhas" target="_blank">+ Social</a>        
+        <a id="email" href="mailto:joanabcq@gmail.com?cc=joanabcq@gmail.com&bcc=joanabcq@gmail.com&subject=Thought%20Exchange&body=We%20are%20starting%20a%20conversation!" target="_top"> + email ]</a>
+</div> 
+
+<div id="textRange"></div>
+
+<p>
+The project 'Choreographing Design' was born while investigating diverse scores & scripts, respectively from post-modern choreographers and designers, leading to a series of web coding experiments on how choreographic and performative qualities could be implemented and explored in design. — And what powers of invention or transformation it sets free.
+<br><br>
+Choreographic thinking = a space & time which manifests discursive conditions;  a meta-liguistic platform for thinking movement and counter-movement; a way to reflect on the tools and processes in design and to question the role of aesthetic, political, economic, socio-cultural decisions in the construction of digital media spaces. How to move away from pre-choreographed environments and compose our own choreographies? 
+<br><br>I understand choreography not as a notation to regularize a single system or composition method, but as a liberating and omniscient point of view. An instrument for self and/or collective expression, in constant pursue for unlimited results. Choreographing design is then a composition methodology which encompasses ideologic, technological and social dimensions. <sup>_by Joana Chicau.</sup></p>
+
+<div id="fim" style="margin-top:2rem;">
+<!-- <a href="series_um.html" target="_blank">1</a> 
+
+<a href="series_dois.html" target="_blank">2</a> 
+
+<a href="series_tres.html" target="_blank">3</a> 
+
+<a href="series_quatro.html" target="_blank">4</a> 
+
+<a href="series_cinco.html" target="_blank">5</a>  -->
+
+<a style="position:absolute; margin-left:-1rem; top:23rem;" href="http://pzwart1.wdka.hro.nl/~jo/notebook/series/glossary.html" target="_blank">Glossary</a>
+
+<a style="position:absolute; top:38rem; margin-left:30rem;" href="perform.html" target="_blank">Performances</a>
+
+<a style="margin-left:10rem;" href="rehearsal_series.html" target="_blank">Rehearsal Series</a>
+
+<!-- <a href="https://www.youtube.com/watch?v=iaNSEOlgK-Y" target="_blank">and here</a> -->
+</div>
+
+<script type="text/javascript">
+
+var delay="10"; //how many seconds
+var count='0';
+var Texts=new Array();
+Texts[0]="Choreography as an OPEN concept, to create yet non-existing aesthetic vocabularies.";
+Texts[1]="Choreography as way to rethink space, time, and composition structures in web environments.";
+Texts[2]="Choreography as an assemblage of bodies, acts, propositions, and statements.";
+Texts[3]="Choreography as a tool for a wider conceptual, perceptual, experimental view of code.";
+Texts[4]="Choreography as the shared construction and de-construction of language structures.";
+Texts[5]="Choreography as a rule-finding/ rule-escaping practice. ";
+Texts[6]="Choreography as a counter-move, a counter-apparatus, force reverted.";
+
+function New_Sequence_or_Phrasing(){
+document.getElementById('textRange').innerHTML=Texts[count];
+count++;
+if(count==Texts.length){count='0';}
+setTimeout("New_Sequence_or_Phrasing()",delay*250);
+}
+
+onload= function() { New_Sequence_or_Phrasing();}
+
+</script>
+</body>
+</html>
