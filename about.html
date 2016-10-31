@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Choreo-Graphic-Thinking</title>
+
+<style>
+
+body {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 6rem;
+    background-color:  #f0f0f5;
+
+}
+
+#textRange { font-size: 0.9rem;    
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-right: 0.6rem;
+    margin-top: 2.6rem;
+    max-width: 52rem;
+}
+
+p { font-size: 2rem;  
+margin-top: 3rem;  
+    font-family: sans-serif;
+    font-weight: bold;
+    line-height: 2.6rem;
+    padding-right: 0.6rem;
+    max-width: 85%;
+
+}
+
+#nav a:link{
+    font-family: sans-serif;
+    text-decoration: none;
+    font-color:blue;
+    font-size: 8pt;
+}    
+
+#first{    
+    margin-top: 0.4rem ;
+}
+
+#nav a:visited {
+    color: blue;
+}
+
+
+.fim a:link {
+    color: white;
+    background-color: white;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem; 
+    border: 0.18rem solid blue;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.65rem;
+    margin-top: 2rem;
+    box-shadow: 1rem 1rem 1.3rem blue;
+        opacity: 1;
+}
+
+.fim a:hover {
+    color:  #f0f0f5 !important;
+    opacity: 0.2;
+   border: 0rem solid  #f0f0f5;
+   text-shadow: -8rem -16rem blue;
+   text-decoration: none;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem; 
+    font-size: 16rem; 
+    box-shadow: none !important;
+}
+
+.fim a:visited {
+    color: white;
+}
+
+#author{
+    font-size: 1.2rem;  
+padding: 0.4rem;  
+}
+
+</style>
+</head>
+<body>
+
+
+<div id="nav">
+        <a href="index.html" target="_blank">[ There is a Project ]</a><br>
+        <a href="http://cargocollective.com/joanachicau" target="_blank">[ and Commissioned Work ]</a>   <br>   
+        <a href="http://jobcb.github.io/author.html" target="_blank">[ by Joana Chicau  ]</a> <br>     
+</div> 
+
+ <div id="textRange"></div>
+ 
+<script type="text/javascript">
+
+var delay="10"; //how many seconds
+var count='0';
+var Texts=new Array();
+Texts[0]="Choreography as an OPEN concept, to create yet non-existing aesthetic vocabularies.";
+Texts[1]="Choreography as way to rethink space, time, and composition structures in web environments.";
+Texts[2]="Choreography as an assemblage of bodies, acts, propositions, and statements.";
+Texts[3]="Choreography as a tool for a wider conceptual, perceptual, experimental view of code.";
+Texts[4]="Choreography as the shared construction and de-construction of language structures.";
+Texts[5]="Choreography as a rule-finding/ rule-escaping practice. ";
+Texts[6]="Choreography as a counter-move, a counter-apparatus, force reverted.";
+
+function New_Sequence_or_Phrasing(){
+document.getElementById('textRange').innerHTML=Texts[count];
+count++;
+if(count==Texts.length){count='0';}
+setTimeout("New_Sequence_or_Phrasing()",delay*250);
+}
+
+onload= function() { New_Sequence_or_Phrasing();}
+
+</script>
+</body>
+</html>
