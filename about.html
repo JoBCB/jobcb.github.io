@@ -23,7 +23,7 @@ body {
 }
 
 p { font-size: 2rem;  
-margin-top: 3rem;  
+margin-top: 2rem;  
     font-family: sans-serif;
     font-weight: bold;
     line-height: 2.6rem;
@@ -32,18 +32,18 @@ margin-top: 3rem;
 
 }
 
-#nav a:link{
+.nav a:link{
     font-family: sans-serif;
     text-decoration: none;
     font-color:blue;
-    font-size: 8pt;
+    font-size: 0.7rem;
 }    
 
 #first{    
     margin-top: 0.4rem ;
 }
 
-#nav a:visited {
+.nav a:visited {
     color: blue;
 }
 
@@ -87,17 +87,26 @@ padding: 0.4rem;
 <body>
 
 
-<div id="nav">
-        <a href="index.html" target="_blank">[ There is an Independent Project</a><br>
-        <a href="http://cargocollective.com/joanachicau" target="_blank">and Commissioned Work </a>   <br>   
-        <a href="http://jobcb.github.io/author.html" target="_blank">by Joana Chicau! ]</a> <br>     
+<div class="nav">
+        <a href="index.html" target="_blank">[ An Independent Project ]</a><br>
+        <a href="http://cargocollective.com/joanachicau" target="_blank">] & Commissioned Work [</a>   <br>   <br>      
 </div> 
 
  <div id="textRange"></div>
  
 
 <p>Bringing choreographic thinking into interface design — developing new ways of navigating through both analogue and digital environments. </p> 
+
+
+
+<span class="nav">
+
+        <a href="http://jobcb.github.io/author.html" target="_blank">@ Joana Chicau! </a>   
+</span> 
+
 <script type="text/javascript">
+
+
 
 var delay="10"; //how many seconds
 var count='0';
