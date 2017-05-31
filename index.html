@@ -8,11 +8,10 @@
 <style>
 
 body {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 10%;
     margin-bottom: 6rem;
     /*background-color:  #f0f0f5;*/
-    background: linear-gradient(90deg, white,white, gray, white, black);
+    background: linear-gradient(90deg, black, white, white, white, white, black);
 }
 
 #textRange { font-size: 0.9rem;
@@ -29,7 +28,7 @@ margin-top: 3rem;
     font-weight: bold;
     line-height: 2.6rem;
     padding-right: 0.6rem;
-    max-width: 85%;
+    max-width: 65%;
 
 }
 
@@ -45,7 +44,7 @@ margin-top: 3rem;
 }
 
 #nav a:visited {
-    color: gray;
+    color: black;
 }
 
 .biglinks
@@ -85,7 +84,7 @@ p { font-size: 0.6rem;
 margin-top: 3rem;
     font-family: sans-serif;
     font-weight: bold;
-    line-height: 0.8rem;
+    line-height: 0.4rem;
     padding-right: 0.6rem;
     max-width: 85%;
 
@@ -155,25 +154,10 @@ Choreographic thinking = a space & time which manifests discursive conditions;  
 
 <script type="text/javascript">
 
-var delay="10"; //how many seconds
-var count='0';
-var Texts=new Array();
-Texts[0]="Choreography as an OPEN concept, to create yet non-existing aesthetic vocabularies.";
-Texts[1]="Choreography as way to rethink space, time, and composition structures in web environments.";
-Texts[2]="Choreography as an assemblage of bodies, acts, propositions, and statements.";
-Texts[3]="Choreography as a tool for a wider conceptual, perceptual, experimental view of code.";
-Texts[4]="Choreography as the shared construction and de-construction of language structures.";
-Texts[5]="Choreography as a rule-finding/ rule-escaping practice. ";
-Texts[6]="Choreography as a counter-move, a counter-apparatus, force reverted.";
-
-function New_Sequence_or_Phrasing(){
-document.getElementById('textRange').innerHTML=Texts[count];
-count++;
-if(count==Texts.length){count='0';}
-setTimeout("New_Sequence_or_Phrasing()",delay*250);
-}
-
-onload= function() { New_Sequence_or_Phrasing();}
+// function pageScroll() {
+//     window.scrollBy(0,1);
+//     scrolldelay = setTimeout(pageScroll,10);
+// }
 
 </script>
 </body>
