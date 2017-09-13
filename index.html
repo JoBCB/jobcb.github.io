@@ -5,102 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Choreo-Graphic-Thinking</title>
 
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500" rel="stylesheet"> 
+
 <style>
 
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500');
+
 body {
-    margin-left: 10%;
-    margin-bottom: 6rem;
-    /*background-color:  #f0f0f5;*/
-    background: linear-gradient(90deg, black, white, white, white, white, black);
+    margin: 0%;
+    width: 100%;
+    background-image: url('links/joana_background.png');
+/*    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+    background-size: 100% auto;  
+    background-repeat:no-repeat;  
+    background-color: black;
 }
 
-#textRange { font-size: 0.9rem;
-    font-family: sans-serif;
-    font-weight: bold;
-    padding-right: 0.6rem;
-    margin-top: 2.6rem;
-    max-width: 52rem;
+#content{
+    width: 70%;
+    color: #F0F0F0;
+	margin-top: 50%;
+	margin-left: 2%;    
+	margin-bottom: 60pt;    
 }
 
-p { font-size: 2rem;
-margin-top: 3rem;
-    font-family: sans-serif;
-    font-weight: bold;
-    line-height: 2.6rem;
-    padding-right: 0.6rem;
-    max-width: 65%;
 
+p { font-size: 14pt;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    line-height: 20pt;
+    padding-right: 12pt;
+}
+
+.title{
+	font-weight: 400;
+	font-size: 14pt;
+}
+
+#nav {
+    margin: 1%;
 }
 
 #nav a:link{
-    font-family: sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
     text-decoration: none;
-    color:black;
+    color:white;
     font-size: 8pt;
 }
 
-#first{
-    margin-top: 0.4rem ;
-}
 
 #nav a:visited {
-    color: black;
+    color: white;
 }
 
-.biglinks
-{    text-decoration: none !important;
-    color:black;
+.biglinks{  
+    font-weight: 500;	
+     text-decoration:none !important;
+    color: white;
+    text-shadow: 0px 0px 4px white;     
 }
 
 .biglinks a:link{
- color: black;
-/* #505050;  #B0B0B0*/
-text-decoration:none !important;
-}
-
-.biglinks:hover {
-    color:  black !important;
-    background-color:  #f0f0f5;
-    text-decoration: none !important;
-    font-size: 2rem;
- box-shadow: 6px 6px gray;
- }
-
-.biglinks:visited {
-    color: black !important;
     text-decoration:none !important;
 }
 
-#author{
-    font-size: 1.2rem;
-padding-top: 2rem;
+.biglinks:hover { 
+	color: black !important;
+ }
+
+.biglinks:visited {
+    color: white;
+    text-decoration:none !important;
 }
 
 
+#author{
+	padding-top: 12pt;
+	color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;}
 
-/* #### Mobile Phones Portrait #### */
-@media screen and (max-device-width: 480px) and (orientation: portrait){
-p { font-size: 0.6rem;
-margin-top: 3rem;
-    font-family: sans-serif;
-    font-weight: bold;
-    line-height: 0.4rem;
-    padding-right: 0.6rem;
-    max-width: 85%;
+#shine {
+	color: black;
+    -webkit-animation: glow .4s infinite alternate;
+}
 
-}}
+@-webkit-keyframes glow {
+    to {
+        text-shadow: 0 0 10px white;
+    }
+}
 
-/* #### Mobile Phones Landscape #### */
-@media screen and (max-device-width: 640px) and (orientation: landscape){
-p { font-size: 1.2rem;
-margin-top: 3rem;
-    font-family: sans-serif;
-    font-weight: bold;
-    line-height: 1rem;
-    padding-right: 0.6rem;
-    max-width: 85%;
 
-}}
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+@media only screen and (max-width: 768px) {
+	#content{
+    width: 100%;   
+}
+#nav a:link{
+    color:black;
+    font-size: 10pt;
+}
+
+#nav a:visited{
+    color:black;
+    font-size: 8pt;
+}
+}
 
 </style>
 </head>
@@ -109,56 +126,36 @@ margin-top: 3rem;
 <div id="nav">
         <a href="https://github.com/JoBCB" target="_blank">[ Github +</a>
         <a href="https://vimeo.com/user16079418" target="_blank"> Vimeo</a>
-        <a href="http://lurk.org/groups/livecode/messages/topic/5coD59tlgzYtKu3DuWA3Nw/" target="_blank">+ Lurk </a>
+        <a href="https://monoskop.org/Joana_Chicau" target="_blank">+ Monoscope </a>
         <a href="http://toplap.org/choreographic-coding/" target="_blank">+ TopLap </a>
 <!--         <a href="http://cargocollective.com/joanachicau" target="_blank">+ CargoCollective </a> -->
-        <a href="https://twitter.com/JoanaBQuelhas" target="_blank">+ Twitter</a>
+        <a href="https://twitter.com/BChicau" target="_blank">+ Twitter</a>
         <a id="email" href="mailto:joanabcq@gmail.com?cc=joanabcq@gmail.com&bcc=joanabcq@gmail.com&subject=Thought%20Exchange&body=We%20are%20starting%20a%20conversation!" target="_top"> + Email ]</a>
 </div>
 
-<!-- <div id="textRange"></div>
- -->
-<p>
-<i>Choreographing Design and/ or Designing Choreographies </i>was born while investigating diverse <a class="biglinks" style="position:fixed;" href="http://pzwart1.wdka.hro.nl/~jo/notebook/series/glossary.html" target="_blank">scores & scripts</a> respectively from post-modern choreographers and designers, leading to a series of web coding experiments on how choreographic and performative qualities could be implemented and explored in design. — And what powers of invention or transformation it sets free.
-<br><br>
-<a class="biglinks" style="position:fixed;" href="author.html" target="_blank"><spam id="author"><sup> by Joana Chicau.<sup></spam></a><br>
-The project has grown into diverse live<a style="position:fixed;" href="perform.html" target="_blank" class="biglinks">performances</a>; coding demonstrations of the methodology/ research; new <a class="biglinks" style="position:fixed;" href="rehearsal_series.html" target="_blank">workshops</a> formats; and new <a class="biglinks" style="position:fixed; text-decoration:none;" href="ways_of_moving/index_tango.html" target="_blank">choreographic genres</a> perspectives.
+<div id="content">
 
+<p> How to move away from pre-choreographed environments and compose our own choreographies? *</p>
+<br><br>
 <br><br>
 
+<p>Choreographing Design | Designing Choreographies is a research project which was born in 2016 while investigating diverse <a class="biglinks" href="http://pzwart1.wdka.hro.nl/~jo/notebook/series/glossary.html" target="_blank">scores & scripts</a> respectively from Post-modern choreographers and designers, leading to a series of web coding experiments on how choreographic and performative qualities could be implemented and explored in design — and what powers of invention or transformation it sets free.
+<br><br>
 
-Choreographic thinking = a space & time which manifests discursive conditions;  a meta-liguistic platform for thinking movement and counter-movement; a way to reflect on the tools and processes in design and to question the role of aesthetic, political, economic, socio-cultural decisions in the construction of digital media spaces. How to move away from pre-choreographed environments and compose our own choreographies?
-<br><br>I understand choreography not as a notation to regularize a single system or composition method, but as a liberating and omniscient point of view. An instrument for self and/or collective expression, in constant pursue for unlimited results. Choreographing design is then a composition methodology which encompasses ideologic, technological and social dimensions.</p>
+The project has been evolving into different formats from <a href="perform.html" target="_blank" class="biglinks">live performances</a> coding demonstrations of this methodology; to a series of <a class="biglinks" href="rehearsal_series.html" target="_blank">workshops</a> and continuous investigations on diverse choreographic genres: <a class="biglinks" href="https://joanachicau.x-temporary.org/" target="_blank"> Eshkol Wachman Movement Notation</a> , <a class="biglinks" href="ways_of_moving/index_tango.html" target="_blank">Tango</a> and <a class="biglinks" id="shine" href="" target="_blank">Butoh (comming soon)</a> 
 
-<div class="fim" style="margin-top:2rem;">
-<!-- <a href="series_um.html" target="_blank">1</a>
+<br><br>
 
-<a href="series_dois.html" target="_blank">2</a>
+<a class="biglinks"href="author.html" target="_blank"><spam id="author"> Joana Chicau's</spam></a> project has been exhibited and presented in international events and residencies.
+<br><br><br>
 
-<a href="series_tres.html" target="_blank">3</a>
+(*) 'I understand choreography not as a notation to regularize a single system or composition method, but as a liberating and omniscient point of view. An instrument for self and/or collective expression, in constant pursue for unlimited results. Choreographing Design | Designing Choreographies is then a performative composition methodology which encompasses ideologic, technological and social dimensions.'
+<br><br>
 
-<a href="series_quatro.html" target="_blank">4</a>
+Choreographic thinking = a space & time which manifests discursive conditions;  a meta-liguistic platform for thinking movement and counter-movement; a way to reflect on the tools and processes in design and to question the role of aesthetic, political, economic, socio-cultural decisions in the construction of digital media spaces. 
 
-<a href="series_cinco.html" target="_blank">5</a>  -->
-
-<!-- <a style="position:fixed; margin-left:-1rem; top:16rem;" href="http://pzwart1.wdka.hro.nl/~jo/notebook/series/glossary.html" target="_blank">Glossary</a>
-
-<a style="position:fixed; top:12rem; margin-left:32rem;" href="perform.html" target="_blank">Performances</a>
-
-<a style="position:fixed; margin-left:18rem; top:24rem;" href="ways_of_moving/index_tango.html" target="_blank">Ways of Moving</a>
-
-<a style="position:fixed; margin-left:-1rem; top:28rem;" href="rehearsal_series.html" target="_blank">Rehearsal Series</a> -->
-
-<!-- <a href="https://www.youtube.com/watch?v=iaNSEOlgK-Y" target="_blank">and here</a> -->
+<br><br></p>
 </div>
 
-<script type="text/javascript">
-
-// function pageScroll() {
-//     window.scrollBy(0,1);
-//     scrolldelay = setTimeout(pageScroll,10);
-// }
-
-</script>
 </body>
 </html>
