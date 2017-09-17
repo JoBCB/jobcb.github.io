@@ -1,0 +1,49 @@
+body {background: #000; width: 100%; height: 100%; overflow: hidden;
+    }
+    .stage-wrapper{position: absolute; top:0; bottom:0; left:0; right: 0; margin: auto; text-align: center; 
+      background: #222;
+      /*background: rgba(223,55,55,1);*/
+      /*background: rgba(223,55,55,1);*/
+      transform: scale(1); 
+      overflow: hidden; 
+      image-rendering: pixelated;
+      overflow: hidden;
+      width: 100vw; height: 100vh;
+      /*-webkit-filter: saturate(0);*/
+    }
+    .stage-wrapper canvas {
+      position: absolute; 
+      top: 0; bottom: 0; left: 0; right: 0;  margin: auto;
+    }
+    audio {
+      position: absolute; z-index: 1000;
+    }
+
+    .wrapper {
+      border-radius: 50%; overflow: hidden;
+      
+    }
+    #v {visibility: hidden;}
+    #main-text {background: #000; padding: .2em .5em; font-size: 1.5em; display: none;}
+
+    #stage {
+      /*background-image: url(http://f.fastcompany.net/multisite_files/fastcompany/imagecache/1280/poster/2014/11/3038725-poster-p-1-this-wonderful-web-toy-turns-your-browser-into-magic-liquid.gif);*/
+/*      background-image: url(https://38.media.tumblr.com/5606707c1fd42b798f1d881bab510a76/tumblr_n24mypWYPu1snb4o6o1_400.gif);
+*/
+    background-image: url(moving.gif);
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
+
+    .controls {
+      opacity: 1;
+      padding: 1em;
+      width: 100%;
+      position: fixed; top:0; left: 0;
+    }
+    .controls button {width: 200px;}
+    #sign {
+        opacity: 1; 
+        bottom: 1em;
+        right: 1em;
+    }
