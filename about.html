@@ -101,27 +101,32 @@ margin-top: 2rem;
 
 <script type="text/javascript">
 
+// similar behavior as an HTTP redirect
+//window.location.replace("http://www.joanachicau.com/");
 
 
-var delay="10"; //how many seconds
-var count='0';
-var Texts=new Array();
-Texts[0]="Choreography as an OPEN concept, to create yet non-existing aesthetic vocabularies.";
-Texts[1]="Choreography as way to rethink space, time, and composition structures in web environments.";
-Texts[2]="Choreography as an assemblage of bodies, acts, propositions, and statements.";
-Texts[3]="Choreography as a tool for a wider conceptual, perceptual, experimental view of code.";
-Texts[4]="Choreography as the shared construction and de-construction of language structures.";
-Texts[5]="Choreography as a rule-finding/ rule-escaping practice. ";
-Texts[6]="Choreography as a counter-move, a counter-apparatus, force reverted.";
+// similar behavior as clicking on a link
+window.location.href = "http://www.joanachicau.com/";
 
-function New_Sequence_or_Phrasing(){
-document.getElementById('textRange').innerHTML=Texts[count];
-count++;
-if(count==Texts.length){count='0';}
-setTimeout("New_Sequence_or_Phrasing()",delay*250);
-}
+// var delay="10"; //how many seconds
+// var count='0';
+// var Texts=new Array();
+// Texts[0]="Choreography as an OPEN concept, to create yet non-existing aesthetic vocabularies.";
+// Texts[1]="Choreography as way to rethink space, time, and composition structures in web environments.";
+// Texts[2]="Choreography as an assemblage of bodies, acts, propositions, and statements.";
+// Texts[3]="Choreography as a tool for a wider conceptual, perceptual, experimental view of code.";
+// Texts[4]="Choreography as the shared construction and de-construction of language structures.";
+// Texts[5]="Choreography as a rule-finding/ rule-escaping practice. ";
+// Texts[6]="Choreography as a counter-move, a counter-apparatus, force reverted.";
 
-onload= function() { New_Sequence_or_Phrasing();}
+// function New_Sequence_or_Phrasing(){
+// document.getElementById('textRange').innerHTML=Texts[count];
+// count++;
+// if(count==Texts.length){count='0';}
+// setTimeout("New_Sequence_or_Phrasing()",delay*250);
+// }
+
+// onload= function() { New_Sequence_or_Phrasing();}
 
 </script>
 </body>
