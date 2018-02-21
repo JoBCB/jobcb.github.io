@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Choreographic code by Joana Chicau">
+  	<meta name="keywords" content="design, media design, graphic design, choreography, physical, digital, web, creative coding, choreographic thinking, performance  | Joana Chicau">
+  	<meta name="author" content="Joana Chicau">
+    <title>Distance_To</title>
+
+
+<script src="microlight/microlight.js"></script>
+
+<style type="text/css">
+    body{
+    margin: 45% 5% 5% 1%;
+    color: #d9e7ff ;
+    /* #C4E4E8; #052C36 #222231 #B5F7FF*/
+    background: linear-gradient(180deg, #d9e7ff,  #222231,  #222231,  #222231 60%,  #222231,  #222231, #d9e7ff);    
+    }
+
+    #score{
+    /*width: 60% !important;*/
+    font-size: 16pt;
+    line-height: 20pt;
+    }
+
+    .microlight {
+    font-family : monospace;
+    white-space : pre;
+    } 
+
+    #title{
+    font-size: 20pt;      
+    font-style: italic;
+    opacity: 0.5;
+    text-shadow: 3px 0px 5px rgba(181, 247, 255,0.25),-3px 0px 5px rgba(181, 247, 255,0.25;
+    }
+</style>    
+</head>
+<body>
+    <div id="score" class=microlight>
+	<code>
+<span id="title">Scores for the performance "Edit Distances" at the Theatre of Sources</span>        
+
+
+// the distance between every tag in this skeleton
+// the distance between every line and its meaning
+
+
+// the distance between the backstage and the front stage 
+// the distance between the detail and the complete settings 
+
+
+// the social muscle and the power to be connected now 
+// the dialogue and the monologue 
+// between poetry and crime 
+// presence and absence 
+// from my hands to your screen 
+
+
+// aesthetic distance 
+// attention and intention 
+
+
+// the distance between language and technique 
+// objects and functions 
+// one and twenty errors 
+// the skin and interpretation 
+// metaphors and trust
+ 
+
+
+// the most distant or a faraway part of the visible scene 
+// the space and the text 
+
+
+
+//language and imagination 
+
+
+
+// one way: 384,402 km 
+
+
+
+// document.querySelector("#watermark").style.display="none"
+// document.querySelector(".gb_Bc.gb_Hg.gb_R").style.display="none"
+// document.querySelector(".app-vertical-widget-holder").style.display="none"
+// document.querySelector("#content-container").style.position="relative" // goes blue
+// document.querySelector("#content-container").style.position="absolute" //goes black
+
+
+// the state of being apart in space, remotenes
+
+
+// document.querySelector("#content-container").style.filter="grayscale(100%)"
+
+
+var delay="10"; //how many seconds
+var count='0';
+var Texts=new Array();
+Texts[0]="";
+Texts[1]="My dance is my walking";
+Texts[2]="";
+Texts[4]="384,402 km";
+Texts[5]="1,261161e+9 foot";
+Texts[6]="";
+Texts[7]="path to or path from?";
+Texts[8]="384,402 kilometer = 1452876256,709 pixel ";
+Texts[9]="how to measure?";
+Texts[10]="";
+Texts[11]="the distance between";
+Texts[12]="";
+Texts[13]="the monotony and the monopoly";
+Texts[14]="zeros and ones";
+Texts[15]="the time in between.";
+
+
+function Distances(){
+document.querySelector('#scale').innerHTML=Texts[count];
+count++;
+if(count==Texts.length){count='0';}
+setTimeout("Distances()",delay*1000);
+document.querySelector("#scale").style.fontSize="62pt";
+}
+//Distances()
+
+// the handbreadth or handbreadth, also called a palm, is an obsolete non-SI unit of length. 
+// in English usage the handbreadth was originally based on the breadth of a human hand without the thumb 
+// and has origins in ancient Egypt. It is distinct from the hand, the breadth of the hand with the thumb
+// it is usually taken to be equal to four digits or fingers, or to three inches (7.62 cm)
+// 5044645,669291 handbreadth 
+
+
+// a lunar distance is a measurement of the distance from the Earth to the Moon 
+// equal to approximately 384,400 km or 238,900 miles   
+// it is used in astronomy to measure long distances like the distances from the Earth to asteroids and comets
+
+// 0,001001046618732 
+
+
+function breath_in () {
+    document.querySelector("#widget-zoom-in").click();
+}
+
+// setInterval("breath_in ()",3000)
+
+
+function breath_out () {
+    document.querySelector("#widget-zoom-out").click();
+}
+
+// setInterval("breath_out ()",5000)
+
+
+//document.querySelector("#scene").style.transform="matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0)";
+
+
+
+
+// List of references: 
+//  
+// The Distance of the Moon (Italo Calvino)<br>
+// Atlas do Corpo e da Imaginação (Gonçalo M.Tavares)<br>
+// Wikipedia.org (search query = Distance)<br>
+// Google Maps (search query = Moon)<br>
+// https://www.google.com/maps/space/moon/@0,4.4565579,22963938m/data=!3m1!1e3
+
+
+</code></div>
+<script>
+
+var xMax, yMax, xNeg=0, yNeg=1;
+
+function pageScroll() {
+    window.scrollBy(5 * xNeg, 5 * yNeg);
+    if(xMax == window.scrollX)xNeg = xNeg * 1;
+    if(yMax == window.scrollY)yNeg = xNeg * -1;
+    scrolldelay = setTimeout(pageScroll,120);
+    console.log(window.scrollY);
+    xMax = window.scrollX;
+    yMax = window.scrollY;
+}
+pageScroll();
+
+</script>
+</body>
+</html>
