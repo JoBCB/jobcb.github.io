@@ -158,6 +158,101 @@ function breath_out () {
 //document.querySelector("#scene").style.transform="matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0)";
 
 
+
+// function new_Dance () {
+window.open("https://www.google.com/maps/space/moon/@-3.3454176,3.0880337,11481593m/data=!3m1!1e3", "_blank", "width=500, height=500");
+window.open("https://www.google.com/maps/space/moon/@-3.3454176,3.0880337,2869642m/data=!3m1!1e3", "_blank", "width=500, height=300");
+window.open("https://www.google.com/maps/space/moon/@-3.3454176,3.0880337,22973824m/data=!3m1!1e3", "_blank", "width=500, height=50");
+window.open("https://www.google.com/maps/space/moon/@-3.3454176,3.0880337,22973824m/data=!3m1!1e3", "_blank", "width=100, height=500");
+window.open("https://www.google.com/maps/space/moon/@-3.3454176,3.0880337,22973824m/data=!3m1!1e3", "_blank", "width=200, height=200");
+window.open("https://www.google.com/maps/space/moon/@-3.3454176,3.0880337,22973824m/data=!3m1!1e3", "_blank", "width=100, height=1500");
+window.open("https://www.google.com/maps/space/moon/@-3.3454176,3.0880337,22973824m/data=!3m1!1e3", "_blank", "width=1500, height=100");
+window.open("https://www.google.com/maps/space/moon/@-3.3454176,3.0880337,22973824m/data=!3m1!1e3", "_blank", "width=100, height=500");
+window.open("https://www.google.com/maps/space/moon/@-3.3454176,3.0880337,22973824m/data=!3m1!1e3", "_blank", "width=50, height=50");
+window.open("https://www.google.com", "_blank", "width=500, height=800");
+}
+
+// - - - - - - - - - on search:
+
+
+var delay="10"; //how many seconds
+var count='0';
+var Texts=new Array();
+Texts[0]="To the moon";
+Texts[1]="";
+Texts[2]="1,261161e+9 foot";
+Texts[4]="384,402 km";
+Texts[5]="My dance is my walking";
+Texts[6]="";
+Texts[7]="path to or path from?";
+Texts[8]="384,402 kilometer = 1452876256,709 pixel";
+Texts[9]="how to measure?";
+Texts[10]="";
+Texts[11]="the distance between";
+Texts[12]="the time in between";
+Texts[13]="the monotony and the monopoly";
+Texts[14]="zeros and ones";
+Texts[15]="round and round";
+
+function edit_Distances (){
+        document.querySelector('#lst-ib').value = Texts[count]; //or: #searchboxinput
+        count++;
+        if(count==Texts.length){count='0';}
+        setTimeout("perpetual_motion()",delay*800);
+    } 
+
+// setInterval("edit_Distances()",1600)
+
+
+
+// document.querySelector("#top_nav").style.display="none";
+// document.querySelector("#appbar").style.display="none";
+// document.querySelector("#searchform").style.display="none";
+
+
+
+// document.querySelector("html").style.backgroundColor="#000000";
+
+
+function cirque () {
+        document.querySelector("body").style.border="3px solid black";
+        document.querySelector("body").style.borderRadius="50%";
+        document.querySelector("body").style.width="1200px";
+        document.querySelector("body").style.height="1200px";
+    } 
+
+//cirque ()
+
+
+
+    function vicious_circle () {
+    var centro = document.querySelector("body"),
+    deg = 10;
+    des_centro = setInterval(function() {
+    centro.style.transform = "rotateY(" + deg + "deg)";
+    deg = (deg + 10) % 360
+    }, 60); 
+    } 
+
+//vicious_circle ()
+
+
+    function pause () {
+    clearInterval(des_centro);
+    } 
+
+// pause ()    
+
+//document.querySelector("body").style.width="0px";
+//document.querySelector("body").style.height="0px";
+
+
+function  off_stage () {
+        document.querySelector("body").style.visibility = "hidden";
+};
+
+//off_stage ()
+
  <br> <br><br>
 
 
