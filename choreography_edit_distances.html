@@ -120,7 +120,7 @@ document.querySelector('#scale').innerHTML=Texts[count];
 count++;
 if(count==Texts.length){count='0';}
 setTimeout("Distances()",delay*1000);
-document.querySelector("#scale").style.fontSize="62pt";
+document.querySelector("#scale").style.fontSize="50pt";
 }
 //Distances()
 
@@ -201,7 +201,6 @@ function edit_Distances (){
         document.querySelector('#lst-ib').value = Texts[count]; //or: #searchboxinput
         count++;
         if(count==Texts.length){count='0';}
-        setTimeout("perpetual_motion()",delay*800);
     } 
 
 // setInterval("edit_Distances()",2000)
@@ -235,7 +234,7 @@ function cirque () {
     des_centro = setInterval(function() {
     centro.style.transform = "rotateY(" + deg + "deg)";
     deg = (deg + 10) % 360
-    }, 60); 
+    }, 80); 
     } 
 
 //vicious_circle ()
