@@ -14,12 +14,12 @@
 body {
     margin: 0%;
     width: 100%;
-    background-image: url('links/joana_background.png');
-/*    -webkit-background-size: cover;
+/*    background-image: url('links/joana_background.png');
+    -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;*/
-    background-size: 100% auto;  
+    background-size: cover;
+    background-size: 100% auto;  */
     background-repeat:no-repeat;  
     background-color: black;
 }
@@ -27,7 +27,7 @@ body {
 #content{
     width: 70%;
     color: #F0F0F0;
-	margin-top: 50%;
+	margin-top: 45%;
 	margin-left: 2%;    
 	margin-bottom: 60pt;    
 }
@@ -102,6 +102,23 @@ p { font-size: 14pt;
 }
 
 
+
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
@@ -114,6 +131,14 @@ p { font-size: 14pt;
 </style>
 </head>
 <body>
+
+
+<div class="video-background">
+    <img src="links/joana_background.png">
+    <div class="video-foreground">
+      <iframe src="https://www.youtube.com/embed/ws9WP9Vn6Js?rel=0&controls=0&showinfo=0&mute=1&loop=1&autoplay=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+    </div>
+</div>
 
 <div id="content">
 
