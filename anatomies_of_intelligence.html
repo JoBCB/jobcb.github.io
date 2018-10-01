@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type">  
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta charset="UTF-8"> 
+<meta name="description" content="Research project by Joana Chicau and Joanathan Reus">
+<meta name="keywords" content="live coding, languages, anatomy, body, embodiment, choreography, physical, digital, web, machine learning, choreographic thinking, performance  | Joana Chicau">
+<meta name="author" content="Joana Chicau">
+<title>Anatomies of Intelligence</title>
 <style>
 * {box-sizing: border-box;}
   
@@ -98,6 +102,9 @@ function imageZoom(imgID, resultID) {
     return {x : x, y : y};
   }
 }
+
+// Initiate zoom effect:
+imageZoom("myimage", "myresult");
 </script>
 </head>
 <body>
@@ -112,12 +119,6 @@ function imageZoom(imgID, resultID) {
   <img id="myimage" src="online-poster.jpg" width="400" height="auto">
   <div id="myresult" class="img-zoom-result"></div>
 </div>
-
-
-<script>
-// Initiate zoom effect:
-imageZoom("myimage", "myresult");
-</script>
 
 </body>
 </html>
