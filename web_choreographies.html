@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="WebChoreographies by Joana Chicau and Jip de Beer">
+  	<meta name="keywords" content="design, media design, graphic design, choreography, physical, digital, web, live, creative coding, choreographic thinking, performance, Joana Chicau, Jip de Beer">
+  	<meta name="author" content="Joana Chicau">
+    <title>Web Choreographies</title>
+
+<style type="text/css">
+
+.closebtn{
+background-color: black !important;
+padding: 2%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 20%;
+  margin-bottom: 10%;  
+  font-family: sans-serif;
+}
+
+.first {
+margin-bottom: 200px;     
+margin: auto; 
+width: 65%;
+transform: skewY(30deg);
+font-size: 32pt;
+line-height: 42pt;
+}
+
+.second {
+margin-bottom: 100px;      
+margin: auto; 
+width: 65%;
+}
+
+.third {
+margin-bottom: 200px;      
+margin: auto; 
+width: 90%;
+transform: skewY(-30deg);    
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+#title{
+  font-size: 20pt;      
+  font-style: italic;
+  opacity: 0.5;
+  text-shadow: 3px 0px 5px rgba(181, 247, 255,0.25),-3px 0px 5px rgba(181, 247, 255,0.25;
+}
+</style>    
+</head>
+<body>
+<div class="first">
+<p>A performance based on live coding experiments in the web browser.
+The screen becomes an open stage, guiding the audience through a
+ technical, conceptual and spiritual journey inside online
+ environments, web programming structures and digital interfaces.
+For her live coding scripts, Joana Chicau created a hybrid syntax
+that links post-modern choreography with web-coding functions. This
+vocabulary brings new meaning and produces a new imaginary around the
+act of coding. This technique follows the concept of esoteric
+programming languages, which integrate a new grammar into an existing
+one when writing software. These functions, are named after
+choreographic concepts, which are assigned to specific web actions.
+In the web console Chicau is calling, juxtaposing and altering such
+functions while displaying the outcomes on the screen. 
+<br> 
+Simultaneously, on the second screen, Jip de Beer displays the same
+web page Joana is live coding. But this time in three dimensions. The
+<br> 
+3D environment Web Space is built in the Unity3D game engine. It
+visualises, in real time, the architecture of the web page in the
+browser. A web page is constructed from a combination of elements,
+like images, paragraphs of text, buttons and links. In essence those
+elements are blocks, positioned in three dimensions. Like a building
+made from LEGO blocks. This visualization mode provides a new
+perspective on the architecture of the web page, the invisible
+hierarchies, micro and macro structures behind the interface.
+We connect our computers screens via WebSockets on the local network.
+When Joana live codes in Jip’s customised version of the open-source
+Firefox browser, and changes the properties of the web page, the
+three dimensional web space changes in real time. Jip explores this
+world using his gamepad, he can also interfere by clicking elements,
+scrolling and navigating between different web pages in the 3D world.
+<br>
+Joana and Jip co-choreograph the path of the performance, engaging in
+ various visual displays, glitches and interactions between HTML
+ elements and web architectures.    
+</p>
+</div>
+
+<div class="second">
+<p>Web: http://joanachicau.com/ & http://jipdebeer.media/</p>
+<p>full script: <a>https://github.com/JoBCB/choreo-graphic_code-assemblage- 1-/blob/master/web_choreographies.js</a></p>
+</div>
+
+<div class="third">
+<div class="row">
+  <div class="column">
+    <img src="screenshots_web_choreographies/WebScreenShot09.png" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="screenshots_web_choreographies/WebScreenShot02.png" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="screenshots_web_choreographies/WebScreenShot06.png" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="screenshots_web_choreographies/WebScreenShot011.png" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+    <div class="column">
+    <img src="screenshots_web_choreographies/WebScreenShot01.png" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+    <div class="column">
+    <img src="screenshots_web_choreographies/WebScreenShot07.png" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+    <div class="column">
+    <img src="screenshots_web_choreographies/WebScreenShot010.png" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+    <div class="column">
+    <img src="screenshots_web_choreographies/WebScreenShot08.png" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>    
+</div>
+
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>
