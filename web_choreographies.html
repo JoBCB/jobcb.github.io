@@ -15,6 +15,16 @@ background-color: black !important;
 padding: 2%;
 }
 
+a{
+	text-decoration: none;	
+	color: blue;
+}
+
+a:visited {
+	text-decoration: none;
+	color: blue;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -27,7 +37,8 @@ body {
 
 .first {
 margin-bottom: 200px;     
-margin: auto; 
+margin-left: auto;
+margin-right: auto;  
 width: 65%;
 transform: skewY(30deg);
 font-size: 32pt;
@@ -35,14 +46,18 @@ line-height: 42pt;
 }
 
 .second {
+font-weight: bold;
 margin-bottom: 100px;      
-margin: auto; 
+margin-left: auto;
+margin-right: auto;  
 width: 65%;
 }
 
 .third {
+margin-top: 200px;      	
 margin-bottom: 200px;      
-margin: auto; 
+margin-left: auto;
+margin-right: auto;  
 width: 90%;
 transform: skewY(-30deg);    
 }
@@ -105,48 +120,25 @@ transform: skewY(-30deg);
 </style>    
 </head>
 <body>
+<p style="position: fixed; margin: 2%"><a href="#credits">\/\/\/\/\/\/</a></p>
 <div class="first">
-<p>A performance based on live coding experiments in the web browser.
-The screen becomes an open stage, guiding the audience through a
- technical, conceptual and spiritual journey inside online
- environments, web programming structures and digital interfaces.
-For her live coding scripts, Joana Chicau created a hybrid syntax
-that links post-modern choreography with web-coding functions. This
-vocabulary brings new meaning and produces a new imaginary around the
-act of coding. This technique follows the concept of esoteric
-programming languages, which integrate a new grammar into an existing
-one when writing software. These functions, are named after
-choreographic concepts, which are assigned to specific web actions.
-In the web console Chicau is calling, juxtaposing and altering such
-functions while displaying the outcomes on the screen. 
-<br> 
-Simultaneously, on the second screen, Jip de Beer displays the same
-web page Joana is live coding. But this time in three dimensions. The
-<br> 
-3D environment Web Space is built in the Unity3D game engine. It
-visualises, in real time, the architecture of the web page in the
-browser. A web page is constructed from a combination of elements,
-like images, paragraphs of text, buttons and links. In essence those
-elements are blocks, positioned in three dimensions. Like a building
-made from LEGO blocks. This visualization mode provides a new
-perspective on the architecture of the web page, the invisible
-hierarchies, micro and macro structures behind the interface.
-We connect our computers screens via WebSockets on the local network.
-When Joana live codes in Jip’s customised version of the open-source
-Firefox browser, and changes the properties of the web page, the
-three dimensional web space changes in real time. Jip explores this
-world using his gamepad, he can also interfere by clicking elements,
-scrolling and navigating between different web pages in the 3D world.
+<p>Web Choreographies is a live coding performance in the web browser by <a target="_blank" href=" http://joanachicau.com/">Joana Chicau</a> and <a target="_blank" href=" http://jipdebeer.media/">Jip de Beer</a>. 
 <br>
-Joana and Jip co-choreograph the path of the performance, engaging in
- various visual displays, glitches and interactions between HTML
- elements and web architectures.    
+The screen becomes an open stage, guiding the audience through a technical, conceptual and spiritual journey inside online environments, web programming structures and digital interfaces. For her live coding scripts, Joana Chicau created a hybrid syntax that links post-modern choreography with web-coding functions. The vocabulary brings new meaning and produces a new imaginary around the act of coding. This technique follows the concept of esoteric programming languages, which integrate a new grammar into an existing one when writing software. These functions, are named after choreographic concepts, which are assigned to specific web actions. In the web console Chicau is calling, juxtaposing and altering such functions while displaying the outcomes on the screen. 
+<br> 
+Simultaneously, on the second screen, Jip de Beer displays the same web page Joana is live coding. But this time in three dimensions. The 3D environment Web Space is built in the Unity3D game engine. It visualises, in real time, the architecture of the web page in the
+browser. A web page is constructed from a combination of elements, like images, paragraphs of text, buttons and links. In essence those elements are blocks, positioned in three dimensions. Like a building made from LEGO blocks. This visualization mode provides a new perspective on the architecture of the web page, the invisible hierarchies, micro and macro structures behind the interface.
+<br>
+We connect our computers screens via WebSockets on the local network. When Joana live codes in Jip’s customised version of the open-source Firefox browser, and changes the properties of the web page, the three dimensional web space changes in real time. Jip explores this world using his gamepad, he can also interfere by clicking elements, scrolling and navigating between different web pages in the 3D world.
+<br>
+Joana and Jip co-choreograph the path of the performance, engaging in various visual displays, glitches and interactions between HTML elements and web architectures.    
 </p>
 </div>
 
-<div class="second">
-<p>Web: http://joanachicau.com/ & http://jipdebeer.media/</p>
-<p>full script: <a>https://github.com/JoBCB/choreo-graphic_code-assemblage- 1-/blob/master/web_choreographies.js</a></p>
+<div class="second" id="credits">
+<p>This project is produced as a co-production with <a target="_blank" href="http://v2.nl/">V2_ Lab for the Unstable Media</a>.</p>
+<p>Code >>> <a target="_blank" href="https://github.com/JoBCB/choreo-graphic_code-assemblage-1-/blob/master/web_choreographies.js"> available here</a> < </p>
+<p>Video documentation > <a target="_blank" href=""> soon!</a></p>
 </div>
 
 <div class="third">
