@@ -6,7 +6,7 @@ var canvas = document.getElementById('canvas')
   , offset
   , glitchInterval;
 
-img.src = 'background.png';
+img.src = 'creadit_hyjunji_jung_V2_JoanaChicau.jpg';
 img.onload = function() {
   init();
 	window.onresize = init;
